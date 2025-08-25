@@ -1,0 +1,595 @@
+:root {
+    --primary-color: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary-color: #64748b;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Estilos para a página de login */
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    /* Removido o efeito de hover */
+}
+
+/* Removido o efeito de hover que fazia o card se mover */
+
+.login-header {
+    padding: 30px 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.login-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.login-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.login-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-group label i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    width: 16px;
+    text-align: center;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+.password-input {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-login:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.login-footer {
+    padding: 20px 30px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.login-footer p {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+.btn-cadastro {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cadastro:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Alertas */
+.alert {
+    padding: 15px;
+    margin: 20px 30px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.alert i {
+    font-size: 18px;
+}
+
+.alert-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger-color);
+    border-left: 4px solid var(--danger-color);
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+    border-left: 4px solid var(--success-color);
+}
+
+.alert-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+    border-left: 4px solid var(--warning-color);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 10px;
+    }
+    
+    .login-header {
+        padding: 20px 20px 15px;
+    }
+    
+    .login-form {
+        padding: 20px;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .alert {
+        margin: 15px 20px 0;
+    }
+    
+    .login-footer {
+        padding: 15px 20px 20px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.login-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Estilos para a página de cadastro */
+.cadastro-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.cadastro-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    /* Removido o efeito de hover */
+}
+
+/* Removido o efeito de hover que fazia o card se mover */
+
+.cadastro-header {
+    padding: 30px 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cadastro-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.cadastro-header p {
+    color: var(--text-muted);
+    font-size: 16px;
+}
+
+.cadastro-form {
+    padding: 30px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.cadastro-footer {
+    padding: 20px 30px 30px;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+.cadastro-footer p {
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: #475569;
+}
+
+/* Responsividade para o cadastro */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Estilos para a página de recuperação de senha */
+.recovery-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.recovery-steps::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background-color: var(--border-color);
+    color: var(--text-muted);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.step-text {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.step.active .step-number {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.step.active .step-text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.step.completed .step-number {
+    background-color: var(--success-color);
+    color: white;
+}
+
+/* Estilos para mensagens de validação */
+.validation-message {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.validation-message.valid {
+    color: var(--success-color);
+}
+
+.validation-message.invalid {
+    color: var(--danger-color);
+}
+
+.password-requirements {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.requirement i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+.requirement.met i {
+    color: var(--success-color);
+}
+
+.requirement.unmet i {
+    color: var(--text-muted);
+}
+
+/* Estilos específicos para a página de cadastro */
+.alternar-cadastro {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-tipo-cadastro {
+    flex: 1;
+    padding: 10px;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-tipo-cadastro:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+.btn-tipo-cadastro.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.btn-cadastrar {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-cadastrar:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-cadastrar:active {
+    transform: translateY(0);
+}
+
+/* Estilos para os requisitos de senha */
+.password-requirements {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.requirement i {
+    margin-right: 5px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.requirement.met i {
+    color: var(--success-color);
+}
+
+/* Estilos para mensagens de erro e sucesso */
+.error {
+    color: var(--danger-color);
+    background-color: rgba(239, 68, 68, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid var(--danger-color);
+}
+
+.success {
+    color: var(--success-color);
+    background-color: rgba(16, 185, 129, 0.1);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid var(--success-color);
+}
+
+/* Estilos para campos de formulário */
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+/* Animação para o card de cadastro - apenas fadeIn, sem movimento no hover */
+.cadastro-card {
+    animation: fadeIn 0.5s ease-out;
+}

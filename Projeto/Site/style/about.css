@@ -1,0 +1,53 @@
+/* Seção sobre */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+  background-color: #f7faff;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-title::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient);
+  bottom: -10px;
+  left: 0;
+}
+
+.about-description {
+  margin-top: 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: var(--transition-normal);
+}
+
+.about-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}

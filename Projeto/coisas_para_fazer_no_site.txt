@@ -1,0 +1,5 @@
+criar visualização de perfil (tanto profissional quando cliente)
+funções de admin (remover ou arrumar)
+arrumar a impressão de relatório
+Links "Saiba mais"
+melhorar acessibilidade

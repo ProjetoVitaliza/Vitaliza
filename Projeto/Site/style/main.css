@@ -1,0 +1,23 @@
+/* ACESSO CSS */
+@import url('reset.css');
+@import url('header_nav_footer.css');
+@import url('buttons_forms.css');
+@import url('mobile_responsive.css');
+@import url('home.css');
+@import url('services.css');
+@import url('about.css');
+@import url('animations.css');
+
+/* VARIÁVEIS GLOBAIS*/
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #6F3AFA;
+    --text-color: #4a4a4a;
+    --background-color: rgba(242, 247, 255, 1);
+    --gradient: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    --gradient-reverse: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --transition-normal: all 0.3s ease;
+    --transition-slow: all 0.5s ease;
+}

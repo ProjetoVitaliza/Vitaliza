@@ -1,0 +1,28 @@
+/* Padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  line-height: 1.6;
+  min-height: 100vh; /* Garante que o footer fique no fim da página */
+}
+
+a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+  transition: var(--transition-normal);
+}

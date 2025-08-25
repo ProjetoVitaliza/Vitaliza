@@ -1,0 +1,169 @@
+/* (1) DISP. MÓVEL */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: var(--gradient);
+    transition: 0.3s;
+}
+
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--gradient);
+    text-align: center;
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 3;
+    box-shadow: var(--shadow-strong);
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.mobile-menu a {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* (2) RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .vitaliza-section, .about-section {
+        padding: 50px 30px;
+    }
+
+    .services-section {
+        padding: 60px 30px;
+    }
+}
+
+@media (max-width: 1010px) {
+    .about-section {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .about-text {
+        order: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        position: static;
+        transform: none;
+        gap: 15px;
+    }
+
+    .logo h1 a {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links, .btn-cadastrar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .services-container {
+        gap: 30px;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 632px) {
+    .vitaliza-section {
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .text-content {
+        width: 100%;
+        padding: 0;
+    }
+
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .stethoscope {
+        width: 200px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .services-section, .about-section {
+        padding: 40px 20px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+}

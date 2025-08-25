@@ -1,0 +1,183 @@
+/* (1) BOTÕES */
+.btn-cadastrar, .cta-button {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-strong);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.btn-cadastrar:hover, .cta-button:hover {
+  background: var(--gradient-reverse);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* (2) FORMULÁRIOS */
+.form-title {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+
+.form-title h1 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.form-title h1::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--gradient);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.containerContact {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;  
+}
+
+.form-section {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 60px;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.toggle-btn {
+  padding: 10px 30px;
+  border: 2px solid var(--primary-color);
+  background-color: white;
+  color: var(--primary-color);
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background: var(--gradient);
+  color: white;
+}
+
+.form {
+  width: 100%;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+/* Ocultar formulário */
+.hidden {
+  display: none;
+}
+
+/* Classes - Forms */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.form-button {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-button:hover {
+  background: var(--gradient-reverse);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+.login-link {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.login-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

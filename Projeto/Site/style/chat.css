@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    height: 90vh;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+h2 {
+    background-color: #3b82f6;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Informação do usuário */
+.user-info {
+    background-color: #f1f5f9;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info .user-avatar {
+    background-color: #3b82f6;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.user-info p {
+    margin: 0;
+    color: #475569;
+}
+
+.user-info strong {
+    color: #3b82f6;
+}
+
+/* Seleção do profissional/cliente */
+.select-container {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    color: #475569;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #3b82f6;
+}
+
+/* Área do chat */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f8fafc;
+}
+
+/* Mensagem para selecionar profissional/cliente */
+.select-prompt {
+    text-align: center;
+    color: #64748b;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+}
+
+/* Container de mensagens */
+#mensagens-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo das mensagens */
+.mensagem {
+    max-width: 65%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    position: relative;
+    word-wrap: break-word;
+    margin: 8px 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Mensagem do usuário atual */
+.mensagem.cliente {
+    background-color: #bfdbfe;
+    margin-left: auto;
+    border-bottom-right-radius: 4px;
+}
+
+/* Mensagem do outro usuário */
+.mensagem.profissional {
+    background-color: #ffffff;
+    margin-right: auto;
+    border-bottom-left-radius: 4px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Nome do remetente */
+.mensagem strong {
+    color: #3b82f6;
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Data da mensagem */
+.mensagem .data {
+    font-size: 0.75em;
+    color: #64748b;
+    float: right;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+/* Formulário de envio de mensagem */
+#mensagemForm {
+    padding: 15px 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+/* Campo de mensagem */
+.message-input-container {
+    flex: 1;
+    position: relative;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    resize: none;
+    height: 50px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    vertical-align: middle;
+}
+
+textarea:focus {
+    border-color: #3b82f6;
+}
+
+/* Botão de enviar */
+#enviar-btn {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+    display: block;
+}
+
+#enviar-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+#enviar-btn:disabled {
+    background-color: #cbd5e1;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Botão voltar */
+.btn-voltar {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #64748b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 15px 20px;
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(100, 116, 139, 0.1);
+}
+
+.btn-voltar:hover {
+    background-color: #475569;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(100, 116, 139, 0.2);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+
+    .mensagem {
+        max-width: 80%;
+    }
+    
+    .btn-voltar {
+        margin: 10px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mensagem {
+    animation: fadeIn 0.3s ease-out;
+}
