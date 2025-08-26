@@ -1,8 +1,13 @@
-# Usa imagem do PHP com Apache
 FROM php:8.2-apache
 
-# Copia todos os arquivos para o diretório do Apache
+# Copia os arquivos do projeto para a pasta padrão do Apache
 COPY . /var/www/html/
 
-# Expõe a porta padrão do Apache
+# Habilita o mod_rewrite (se precisar para frameworks)
+RUN a2enmod rewrite
+
+# Exponha a porta padrão do Apache
 EXPOSE 80
+
+# O CMD já vem no php:apache para rodar o apache2-foreground
+
