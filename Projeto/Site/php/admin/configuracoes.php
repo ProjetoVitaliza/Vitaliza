@@ -625,8 +625,8 @@ $conn->close();
             align-items: center;
         }
         
-        .config-toggle-label span {
-            margin-left: 10px;
+        .config-toggle {
+            margin-right: 10px;
         }
         
         .config-form-actions {
