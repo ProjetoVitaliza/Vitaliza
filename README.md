@@ -1,7 +1,7 @@
 Siga as regras abaixo para bom uso do repositório
 
-> [!NOTE] Nota
-> Você, como dono, tem o direito de modificar, remover ou adicionar regras.
+>[!NOTE] Nota
+>Você, como dono, tem o direito de modificar, remover ou adicionar regras.
 
 1. Ao modificar com VSCode, indique o seu **nome**
 2. Descreva o **propósito** da mudança (ex.: correção de css da configuração)
