@@ -46,6 +46,9 @@ while ($row = $result->fetch_assoc()) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["salvar_configuracoes"])) {
+    if !(isset($_POST['aceito_termos']) ? $_POST['aceito_termos'] : 0) {
+        
+    }
     $grupo_selecionado = $_POST["grupo_configuracao"] ?? 'geral';
     $erro_encontrado = false;
     
@@ -807,22 +810,22 @@ $conn->close();
                 
                 <div class="config-tabs">
                     <a href="?grupo=geral" class="config-tab <?php echo $grupo_selecionado === 'geral' ? 'config-active' : ''; ?>">
-                        <i class="fas fa-globe"></i> Geral
+                        <i class="fas fa-globe"></i>Geral
                     </a>
                     <a href="?grupo=consultas" class="config-tab <?php echo $grupo_selecionado === 'consultas' ? 'config-active' : ''; ?>">
-                        <i class="fas fa-calendar-check"></i> Consultas
+                        <i class="fas fa-calendar-check"></i>Consultas
                     </a>
                     <a href="?grupo=email" class="config-tab <?php echo $grupo_selecionado === 'email' ? 'config-active' : ''; ?>">
-                        <i class="fas fa-envelope"></i> E-mail
+                        <i class="fas fa-envelope"></i>E-mail
                     </a>
                     <a href="?grupo=aparencia" class="config-tab <?php echo $grupo_selecionado === 'aparencia' ? 'config-active' : ''; ?>">
-                        <i class="fas fa-paint-brush"></i> Aparência
+                        <i class="fas fa-paint-brush"></i>Aparência
                     </a>
                     <a href="?grupo=seguranca" class="config-tab <?php echo $grupo_selecionado === 'seguranca' ? 'config-active' : ''; ?>">
-                        <i class="fas fa-shield-alt"></i> Segurança
+                        <i class="fas fa-shield-alt"></i>Segurança
                     </a>
                     <a href="?grupo=backup" class="config-tab <?php echo $grupo_selecionado === 'backup' ? 'config-active' : ''; ?>">
-                        <i class="fas fa-database"></i> Backup e Restauração
+                        <i class="fas fa-database"></i>Backup e Restauração
                     </a>
                 </div>
                 
