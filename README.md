@@ -1,6 +1,6 @@
 Siga as regras abaixo para bom uso do repositório
 
->[!NOTE] Nota
+>Nota:
 >Você, como dono, tem o direito de modificar, remover ou adicionar regras.
 
 1. Ao modificar com VSCode, indique o seu **nome**
