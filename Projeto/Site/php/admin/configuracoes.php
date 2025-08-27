@@ -1,6 +1,5 @@
 <?php
 session_start();
-$teste = 0;
 include '../conexoes/conexao.php';
 
 // Verificar se o usuário está logado como administrador
@@ -46,9 +45,7 @@ while ($row = $result->fetch_assoc()) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["salvar_configuracoes"])) {
-    if !(isset($_POST['aceito_termos']) ? $_POST['aceito_termos'] : 0) {
-        
-    }
+
     $grupo_selecionado = $_POST["grupo_configuracao"] ?? 'geral';
     $erro_encontrado = false;
     
@@ -764,7 +761,6 @@ $conn->close();
     </style>
 </head>
 <body>
-    <?php echo $teste;?>
     <div class="config-container">
         <div class="config-header">
             <div class="config-header-title">
@@ -1118,6 +1114,19 @@ $conn->close();
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
         </div>
     </div>
+
+    <?php
+    // Atualizar checkbox
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["salvar_configuracoes"])) {
+        if (!isset($_POST['verificacao_profissionais'])) {
+            $_POST['verificacao_profissionais'] = 0;
+        }
+
+        if (!isset($_POST['mostrar_logo'])) {
+            $_POST['mostrar_logo'] = 0;
+        }
+    }
+    ?>
     
     <script>
         // Script para exibir o nome do arquivo selecionado
