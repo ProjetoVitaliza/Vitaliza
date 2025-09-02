@@ -384,6 +384,10 @@ $conn->close();
                 flex-wrap: wrap;
             }
         }
+
+        @media print {
+            
+        }
     </style>
 </head>
 <body>
