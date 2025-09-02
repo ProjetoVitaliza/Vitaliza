@@ -384,14 +384,54 @@ $conn->close();
                 flex-wrap: wrap;
             }
         }
-
+        
+        /* Impressão */
         @media print {
-            
+            * {
+                background: transparent;
+                text-shadow: none;
+                filter: none;
+                -ms-filter: none;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                line-height: 1.4em;
+                font: 12pt Georgia, "Times New Roman", Times, serif;
+                color: #000;
+            }
+
+            @page {
+                margin: 0.5cm;
+            }
+
+            header, nav, footer, video, audio, object, embed {
+                display: none;
+            }
+
+            .print {
+                display: block;
+            }
+
+            .flex {
+                display: flex;
+                align-items: stretch;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            .page-break {
+                page-break-after: always;
+            }
         }
+        
     </style>
 </head>
 <body>
-<div class="header">
+<header class="header no-print">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -418,17 +458,17 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
+</header> 
 
-    <div class="container">
+    <main class="container">
         
 
-        <div class="content-header">
+        <section class="content-header">
             <h1><i class="fas fa-chart-bar"></i> Relatórios</h1>
-            <p>Visualize estatísticas e relatórios do sistema</p>
-        </div>
+            <p class="no-print" >Visualize estatísticas e relatórios do sistema</p>
+        </section>
         
-        <div class="filter-container">
+        <section class="filter-container no-print">
             <div class="filter-tabs">
                 <a href="?periodo=todos" class="filter-tab <?php echo $periodo === 'todos' ? 'active' : ''; ?>">
                     <i class="fas fa-infinity"></i> Todos os períodos
@@ -454,10 +494,10 @@ $conn->close();
                 <input type="date" name="data_fim" value="<?php echo $data_fim ?? ''; ?>" required>
                 <button type="submit"><i class="fas fa-filter"></i> Filtrar</button>
             </form>
-        </div>
+        </section>
 
-        <div class="dashboard-widgets">
-            <div class="widget">
+        <section class="dashboard-widgets flex">
+            <article class="widget">
                 <div class="widget-header">
                     <i class="fas fa-users icon-clientes"></i>
                     <h3 class="widget-title">Clientes</h3>
@@ -476,9 +516,9 @@ $conn->close();
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             
-            <div class="widget">
+            <article class="widget print">
                 <div class="widget-header">
                     <i class="fas fa-user-md icon-profissionais"></i>
                     <h3 class="widget-title">Profissionais</h3>
@@ -501,9 +541,9 @@ $conn->close();
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
             
-            <div class="widget">
+            <article class="widget print">
                 <div class="widget-header">
                     <i class="fas fa-calendar-check icon-consultas"></i>
                     <h3 class="widget-title">Consultas</h3>
@@ -526,41 +566,41 @@ $conn->close();
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
         
-        <div class="charts-container">
-            <div class="chart-widget">
+        <section class="charts-container print">
+            <article class="chart-widget page-break">
                 <div class="chart-header">
                     <h3 class="chart-title"><i class="fas fa-chart-line"></i> Atividade Mensal</h3>
                 </div>
                 <div class="chart-container">
                     <canvas id="activityChart"></canvas>
                 </div>
-            </div>
+            </article>
             
-            <div class="chart-widget">
+            <article class="chart-widget">
                 <div class="chart-header">
                     <h3 class="chart-title"><i class="fas fa-chart-pie"></i> Status das Consultas</h3>
                 </div>
                 <div class="chart-container">
                     <canvas id="statusChart"></canvas>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
         
-        <div class="chart-widget">
+        <section class="chart-widget print page-break">
             <div class="chart-header">
                 <h3 class="chart-title"><i class="fas fa-chart-bar"></i> Top 5 Especialidades Mais Procuradas</h3>
             </div>
             <div class="chart-container">
                 <canvas id="especialidadesChart"></canvas>
             </div>
-        </div>
+        </section>
         
-        <div class="admin-reports">
+        <section class="admin-reports print">
             <h2>Status Detalhado das Consultas</h2>
-            <div class="table-responsive">
+            <article class="table-responsive">
                 <table class="admin-table">
                     <thead>
                         <tr>
@@ -614,10 +654,10 @@ $conn->close();
                         </tr>
                     </tfoot>
                 </table>
-            </div>
-        </div>
+            </article>
+        </section>
 
-        <div class="admin-actions" style="margin-top: 20px;">
+        <section class="admin-actions no-print" style="margin-top: 20px;">
             <a href="admin_home.php" class="btn btn-outline">
                 <i class="fas fa-arrow-left"></i> Voltar
             </a>
@@ -627,12 +667,12 @@ $conn->close();
             <a href="#" class="btn btn-outline" id="exportarCSV">
                 <i class="fas fa-file-csv"></i> Exportar CSV
             </a>
-        </div>
+        </section>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script>
