@@ -72,7 +72,7 @@ $conn->close();
     <link rel="icon" type="image/png" href="../../midia/logo.png">
 </head>
 <body>
-<div class="header">
+<header class="header">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -99,7 +99,7 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
+</header> 
 
         <div class="content-header">
             <h1><i class="fas fa-user-edit"></i> Editar Administrador</h1>
@@ -140,9 +140,9 @@ $conn->close();
             </form>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
+        </footer>
     </div>
 </body>
 </html>

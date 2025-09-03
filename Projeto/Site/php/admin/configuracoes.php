@@ -761,8 +761,8 @@ $conn->close();
     </style>
 </head>
 <body>
-    <div class="config-container">
-        <div class="config-header">
+    <main class="config-container">
+        <header class="config-header">
             <div class="config-header-title">
                 <h1><i class="fas fa-cogs"></i> Configurações do Sistema</h1>
             </div>
@@ -777,9 +777,9 @@ $conn->close();
                     </span>
                 </div>
             </div>
-        </div>
+        </header>
         
-        <div class="config-content">
+        <section class="config-content">
             <?php if (!empty($mensagem_sucesso)): ?>
                 <div class="config-alert config-alert-success">
                     <i class="fas fa-check-circle"></i>
@@ -1108,12 +1108,12 @@ $conn->close();
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         
-        <div class="config-footer">
+        <footer class="config-footer">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <?php
     // Atualizar checkbox

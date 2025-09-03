@@ -280,7 +280,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -307,9 +307,9 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
+</header> 
 
-    <div class="container">
+    <main class="container">
        
     
 
@@ -522,7 +522,7 @@ $conn->close();
         <div class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
         </div>
-    </div>
+    </main>
 
     <!-- Modal de confirmação de exclusão -->
     <div id="modal-exclusao" class="modal">

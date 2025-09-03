@@ -146,7 +146,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -173,11 +173,9 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
+</header> 
 
-    <div class="container">
-        
-
+    <main class="container">
         <div class="content-header">
             <h1><i class="fas fa-user-edit"></i> Editar Cliente</h1>
             <p>Atualize as informações do cliente</p>
@@ -269,12 +267,12 @@ $conn->close();
                     </a>
                 </div>
             </form>
-        </div>
+        </main>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <style>
         /* Estilos específicos para editar_cliente.php */

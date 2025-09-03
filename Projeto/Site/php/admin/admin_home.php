@@ -101,7 +101,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav class="navbar">
         <div>
             <div>
@@ -128,11 +128,11 @@ $conn->close();
             </form>
         </div>
     </nav>
-</div>    
+</header>    
     
 
-    <div class="container"> 
-        <div class="welcome-section">
+    <main class="container"> 
+        <section class="welcome-section">
             <div class="user-avatar-large"><?php echo substr($admin_nome, 0, 1); ?></div>
             <h1>Bem-vindo ao Painel Administrativo, <?php echo $admin_nome; ?>!</h1>
             <p>Gerencie todos os aspectos do sistema <?php echo htmlspecialchars($config_valor[1]); ?></p>
@@ -151,9 +151,9 @@ $conn->close();
                     <div class="label">Consultas Pendentes</div>
                 </a>
             </div>
-        </div>
+        </section>
 
-        <div class="dashboard">
+        <section class="dashboard">
             <a href="gerenciar_clientes.php" class="card">
                 <i class="fas fa-users"></i>
                 <h3>Gerenciar Clientes</h3>
@@ -194,12 +194,12 @@ $conn->close();
                 <h3>Configurações</h3>
                 <p>Configure parâmetros do sistema</p>
             </a>
-        </div>
+        </section>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <script>
         // Função para atualizar os contadores dinamicamente

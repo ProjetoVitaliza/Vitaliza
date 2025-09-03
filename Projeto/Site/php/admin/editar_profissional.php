@@ -173,7 +173,7 @@ $conn->close();
     <link rel="icon" type="image/png" href="../../midia/logo.png">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <div class="header">
             <div class="header-title">
                 <h1><?php echo htmlspecialchars($config_valor[1]); ?></h1>
@@ -324,10 +324,10 @@ $conn->close();
             </form>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <style>
         /* Estilos específicos para editar_profissional.php */

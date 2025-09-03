@@ -199,7 +199,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -226,8 +226,8 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
-    <div class="container">
+</header> 
+    <main class="container">
         
 
         <div class="content-header">
@@ -358,10 +358,10 @@ $conn->close();
             </a>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <style>
         /* Estilos específicos para o formulário de adicionar cliente */

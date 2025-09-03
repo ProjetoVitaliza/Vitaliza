@@ -212,7 +212,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -239,9 +239,9 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
+    </header> 
 
-    <div class="container">
+   <main class="container">
         
         <div class="content-header">
             <h1><i class="fas fa-users-cog"></i> Gerenciar Administradores</h1>
@@ -402,10 +402,10 @@ $conn->close();
             <?php endif; ?>
         <?php endif; ?>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <!-- Modal de confirmação de exclusão -->
     <div id="modal-exclusao" class="modal">

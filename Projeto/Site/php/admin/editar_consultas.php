@@ -475,7 +475,7 @@ $conn->close();
     </style>
 </head>
 <body>
-    <div class="editar-container">
+    <main class="editar-container">
         <div class="editar-header">
             <div class="editar-header-title">
                 <h1><?php echo htmlspecialchars($config_valor[1]); ?></h1>
@@ -617,10 +617,10 @@ $conn->close();
             <?php endif; ?>
         </div>
 
-        <div class="editar-footer">
+        <footer class="editar-footer">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
     <script>
 // Espera que o DOM esteja totalmente carregado
 document.addEventListener('DOMContentLoaded', function() {
