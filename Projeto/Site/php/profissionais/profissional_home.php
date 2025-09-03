@@ -114,7 +114,7 @@ $conn->close();
 </head>
 <body>
 
-    <div class="header">
+    <header class="header">
         <nav class="navbar">
         
             <div>
@@ -137,10 +137,10 @@ $conn->close();
                 </form>
             </div>
         </nav>
-    </div>
+    </header>
 
 
-    <div class="container">
+    <main class="container">
         
         <div class="welcome-section">
             <div class="user-avatar-large"><?php echo substr($profissional_nome, 0, 1); ?></div>
@@ -189,10 +189,10 @@ $conn->close();
             </a>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <script>
         // Função para atualizar os contadores dinamicamente

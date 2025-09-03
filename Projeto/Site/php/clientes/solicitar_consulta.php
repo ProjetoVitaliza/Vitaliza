@@ -121,32 +121,28 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
-        <nav class="navbar">
-            
+<header class="header">
+    <nav class="navbar">    
         <div class="logo">
-                    <h1>
-                        <a href="index.php">
-                            <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
-                            <?php echo htmlspecialchars($config_valor[1]); ?>
-                        </a>
-                    </h1>
-                </div>
-            <div class="user-info">
-                <div class="user-avatar"><?php echo substr($cliente_nome, 0, 1); ?></div>
-                <span><?php echo $cliente_nome; ?></span>
-                <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
-                    <button type="submit" class="btn btn-outline btn-sm">
-                        <i class="fas fa-sign-out-alt"></i> Sair
-                    </button>
-                </form>
-            </div>
-        </nav>    
-    </div>
-    
-    <div class="container">
-        
-
+            <h1>
+                <a href="index.php">
+                    <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
+                    <?php echo htmlspecialchars($config_valor[1]); ?>
+                </a>
+            </h1>
+        </div>
+        <div class="user-info">
+            <div class="user-avatar"><?php echo substr($cliente_nome, 0, 1); ?></div>
+            <span><?php echo $cliente_nome; ?></span>
+            <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
+                <button type="submit" class="btn btn-outline btn-sm">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </form>
+        </div>
+    </nav>    
+</header>  
+    <main class="container">
         <div class="form-container">
             <h2><i class="fas fa-calendar-plus" style="color: var(--primary-color); margin-right: 10px;"></i>Solicitar Consulta</h2>
             <p class="text-muted" style="margin-bottom: 20px;">Preencha o formulário abaixo para solicitar uma consulta com um profissional de saúde</p>
@@ -215,10 +211,10 @@ $conn->close();
             </a>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 
     <script>
         // Validação do lado do cliente

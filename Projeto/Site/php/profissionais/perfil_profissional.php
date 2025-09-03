@@ -123,16 +123,16 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
-<nav class="navbar">
-        <div class="logo">
-                    <h1>
-                        <a href="index.html">
-                            <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
-                            <?php echo htmlspecialchars($config_valor[1]); ?>
-                        </a>
-                    </h1>
-                </div>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
+                        <?php echo htmlspecialchars($config_valor[1]); ?>
+                    </a>
+                </h1>
+            </div>
             
             <div class="user-info">
                 <div class="user-avatar"><?php echo substr($profissional["ga4_2_nome"], 0, 1); ?></div>
@@ -141,10 +141,10 @@ $conn->close();
                     <i class="fas fa-home"></i> Início
                 </a>
             </div>
-</nav>
-        </div>
+        </nav>
+    </header>
 
-    <div class="container">
+    <main class="container">
         
 
         <?php if ($message): ?>
@@ -246,7 +246,7 @@ $conn->close();
         <a href="profissional_home.php" class="back-button">
             <i class="fas fa-arrow-left"></i> Voltar
         </a>
-    </div>
+    </main>
 
     <script>
         function openTab(evt, tabName) {

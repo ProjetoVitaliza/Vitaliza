@@ -155,7 +155,7 @@ if ($cliente_id) {
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h2>Chat com Clientes</h2>
         
         <div class="user-info">
@@ -227,7 +227,7 @@ if ($cliente_id) {
         </form>
         
         <a href="profissional_home.php" class="btn-voltar">Voltar</a>
-    </div>
+    </main>
 
     <script>
         // Função para rolar o chat para o final

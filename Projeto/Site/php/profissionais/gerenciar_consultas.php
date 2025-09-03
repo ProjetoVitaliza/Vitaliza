@@ -201,16 +201,16 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+    <header class="header">
         <nav class="navbar">
-        <div class="logo">
-                    <h1>
-                        <a href="index.html">
-                            <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
-                            <?php echo htmlspecialchars($config_valor[1]); ?>
-                        </a>
-                    </h1>
-                </div>
+            <div class="logo">
+                <h1>
+                    <a href="index.html">
+                        <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
+                        <?php echo htmlspecialchars($config_valor[1]); ?>
+                    </a>
+                </h1>
+            </div>
             <div class="user-info">
                 <div class="user-avatar"><?php echo substr($profissional_nome, 0, 1); ?></div>
                 <span><?php echo $profissional_nome; ?></span>
@@ -221,11 +221,9 @@ $conn->close();
                 </form>
             </div>
         </nav>
-    </div>
+    </header>
 
-    <div class="container">
-        
-
+    <main class="container">
         <div class="filters">
             <div class="filter-tabs">
                 <a href="?status=all" class="filter-tab <?php echo $status_filter === 'all' ? 'active' : ''; ?>">
@@ -390,6 +388,6 @@ $conn->close();
         <a href="profissional_home.php" class="back-button">
             <i class="fas fa-arrow-left"></i> Voltar
         </a>
-    </div>
+    </main>
 </body>
 </html>

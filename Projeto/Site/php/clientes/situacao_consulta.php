@@ -230,7 +230,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
         <nav class="navbar">
             
         <div class="logo">
@@ -253,7 +253,7 @@ $conn->close();
         </nav>    
     </div>
     
-    <div class="container">
+    <main class="container">
        
 
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
@@ -349,10 +349,10 @@ $conn->close();
             </a>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
 </body>
 </html>
 

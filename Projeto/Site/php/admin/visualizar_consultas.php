@@ -160,7 +160,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav class="navbar">
             <div class="logo">
                     <h1>
@@ -187,11 +187,9 @@ $conn->close();
             </div>
         </div>
     </nav>
-</div> 
+</header> 
 
-    <div class="container">
-       
-            
+    <main class="container">            
             <div class="content-header">
                 <h1><i class="fas fa-calendar-check"></i> Detalhes da Consulta</h1>
                 <p>Visualize informações detalhadas sobre esta consulta</p>
@@ -328,10 +326,10 @@ $conn->close();
             </div>
         </div>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </main>
     
     <!-- Modal para recusar consulta -->
     <div id="modal-recusar" class="modal">

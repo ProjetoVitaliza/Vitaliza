@@ -126,7 +126,7 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
+<header class="header">
     <nav>
         <div class="logo">
             <h1>
@@ -155,9 +155,9 @@ $conn->close();
             </a>
         </div>
     </nav>
-</div>
+</header>
 
-    <div class="container">
+    <main class="container">
 
         
         <?php if ($message): ?>
@@ -259,7 +259,7 @@ $conn->close();
         <a href="cliente_home.php" class="back-button">
             <i class="fas fa-arrow-left"></i> Voltar
         </a>
-    </div>
+    </main>
 </body>
 
 <script>

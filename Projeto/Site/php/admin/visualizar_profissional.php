@@ -155,36 +155,36 @@ $conn->close();
 </head>
 <body>
 
-<div class="header">
-    <nav class="navbar">
-            <div class="logo">
-                    <h1>
-                        <a href="index.php">
-                            <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
-                            <?php echo htmlspecialchars($config_valor[1]); ?>
-                        </a>
-                    </h1>
+    <header class="header">
+        <nav class="navbar">
+                <div class="logo">
+                        <h1>
+                            <a href="index.php">
+                                <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
+                                <?php echo htmlspecialchars($config_valor[1]); ?>
+                            </a>
+                        </h1>
+                    </div>
+                <div class="user-info">
+                    <div class="user-avatar"><?php echo substr($admin_nome, 0, 1); ?></div>
+                    <span><?php echo $admin_nome; ?></span>
+                    <span class="admin-badge <?php echo $nivel_acesso === 'superadmin' ? 'superadmin-badge' : ''; ?>">
+                        <?php echo $nivel_acesso === 'superadmin' ? 'Super Admin' : 'Admin'; ?>
+                    </span>
+                    <a href="admin_home.php" class="btn btn-outline btn-sm" style="margin-left: 15px;">
+                        <i class="fas fa-home"></i> Dashboard
+                    </a>
+                    <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
+                        <button type="submit" class="btn btn-outline btn-sm">
+                            <i class="fas fa-sign-out-alt"></i> Sair
+                        </button>
+                    </form>
                 </div>
-            <div class="user-info">
-                <div class="user-avatar"><?php echo substr($admin_nome, 0, 1); ?></div>
-                <span><?php echo $admin_nome; ?></span>
-                <span class="admin-badge <?php echo $nivel_acesso === 'superadmin' ? 'superadmin-badge' : ''; ?>">
-                    <?php echo $nivel_acesso === 'superadmin' ? 'Super Admin' : 'Admin'; ?>
-                </span>
-                <a href="admin_home.php" class="btn btn-outline btn-sm" style="margin-left: 15px;">
-                    <i class="fas fa-home"></i> Dashboard
-                </a>
-                <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
-                    <button type="submit" class="btn btn-outline btn-sm">
-                        <i class="fas fa-sign-out-alt"></i> Sair
-                    </button>
-                </form>
             </div>
-        </div>
-    </nav>
-</div> 
+        </nav>
+    </header> 
 
-    <div class="container">
+    <main class="container">
        
         <div class="content-header">
             <h1><i class="fas fa-user-md"></i> Detalhes do Profissional</h1>
@@ -405,12 +405,12 @@ $conn->close();
                     </table>
                 </div>
             <?php endif; ?>
-        </div>
+        </main>
 
-        <div class="footer-home">
+        <footer class="footer-home">
             <p>&copy; <?php echo date('Y'); ?> <?php echo htmlspecialchars($config_valor[1]); ?> - Todos os direitos reservados</p>
-        </div>
-    </div>
+        </footer>
+    </header>
 
     <style>
         /* Estilos específicos para visualizar_profissional.php */

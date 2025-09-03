@@ -155,7 +155,7 @@ $mensagens = mysqli_fetch_all($result, MYSQLI_ASSOC);
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h2>Chat com Profissional</h2>
         
         <div class="user-info">
@@ -227,7 +227,7 @@ $mensagens = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </form>
         
         <a href="cliente_home.php" class="btn-voltar">Voltar</a>
-    </div>
+    <main>
 </body>
 
 <script>
