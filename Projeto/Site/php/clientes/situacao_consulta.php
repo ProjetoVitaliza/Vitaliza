@@ -231,27 +231,26 @@ $conn->close();
 <body>
 
 <header class="header">
-        <nav class="navbar">
-            
+    <nav class="navbar"> 
         <div class="logo">
-                    <h1>
-                        <a href="index.php">
-                            <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
-                            <?php echo htmlspecialchars($config_valor[1]); ?>
-                        </a>
-                    </h1>
-                </div>
-            <div class="user-info">
-                <div class="user-avatar"><?php echo substr($cliente_nome, 0, 1); ?></div>
-                <span><?php echo $cliente_nome; ?></span>
-                <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
-                    <button type="submit" class="btn btn-outline btn-sm">
-                        <i class="fas fa-sign-out-alt"></i> Sair
-                    </button>
-                </form>
+                <h1>
+                    <a href="index.php">
+                        <img class="img-logo" src="../../midia/logo.png" alt="Logo Vitaliza" width="40" height="40"> 
+                        <?php echo htmlspecialchars($config_valor[1]); ?>
+                    </a>
+                </h1>
             </div>
-        </nav>    
-    </div>
+        <div class="user-info">
+            <div class="user-avatar"><?php echo substr($cliente_nome, 0, 1); ?></div>
+            <span><?php echo $cliente_nome; ?></span>
+            <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
+                <button type="submit" class="btn btn-outline btn-sm">
+                    <i class="fas fa-sign-out-alt"></i> Sair
+                </button>
+            </form>
+        </div>
+    </nav>    
+</header>
     
     <main class="container">
        

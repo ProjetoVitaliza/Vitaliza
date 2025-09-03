@@ -761,23 +761,40 @@ $conn->close();
     </style>
 </head>
 <body>
+
+<header class="header">
+    <nav class="navbar">
+            <div class="logo">
+                    <h1>
+                        <a href="index.php">
+                            <img class="img-logo" src="../../midia/logo.png" alt="Logo <?php echo htmlspecialchars($config_valor[1]); ?>" width="40" height="40"> 
+                            <?php echo htmlspecialchars($config_valor[1]); ?>
+                        </a>
+                    </h1>
+                </div>
+            <div class="user-info">
+                <div class="user-avatar"><?php echo substr($admin_nome, 0, 1); ?></div>
+                <span><?php echo $admin_nome; ?></span>
+                <span class="admin-badge <?php echo $nivel_acesso === 'superadmin' ? 'superadmin-badge' : ''; ?>">
+                    <?php echo $nivel_acesso === 'superadmin' ? 'Super Admin' : 'Admin'; ?>
+                </span>
+                <a href="admin_home.php" class="btn btn-outline btn-sm" style="margin-left: 15px;">
+                    <i class="fas fa-home"></i> Dashboard
+                </a>
+                <form method="post" action="../conexoes/logout.php" style="margin-left: 15px;">
+                    <button type="submit" class="btn btn-outline btn-sm">
+                        <i class="fas fa-sign-out-alt"></i> Sair
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header> 
     <main class="config-container">
-        <header class="config-header">
-            <div class="config-header-title">
-                <h1><i class="fas fa-cogs"></i> Configurações do Sistema</h1>
-            </div>
-            <div class="config-user-info">
-                <div class="config-user-avatar">
-                    <?php echo substr($admin_nome, 0, 1); ?>
-                </div>
-                <div>
-                    <span><?php echo $admin_nome; ?></span>
-                    <span class="config-admin-badge <?php echo $nivel_acesso === 'superadmin' ? 'config-superadmin-badge' : ''; ?>">
-                        <?php echo $nivel_acesso === 'superadmin' ? 'Super Admin' : 'Admin'; ?>
-                    </span>
-                </div>
-            </div>
-        </header>
+    <div class="content-header">
+        <h1><i class="fas fa-calendar-check"></i> Configurações</h1>
+        <p>Configure o sistema Vitaliza como administrador</p>
+    </div>
         
         <section class="config-content">
             <?php if (!empty($mensagem_sucesso)): ?>
