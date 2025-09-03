@@ -416,7 +416,6 @@ $conn->close();
 
             .flex {
                 display: flex;
-                align-items: stretch;
             }
 
             .no-print {
