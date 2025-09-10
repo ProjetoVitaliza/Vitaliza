@@ -65,7 +65,7 @@ include 'php/conexoes/conexao.php';
             <button></button>
             <section class="vitaliza-section">
                 <div class="text-content">
-                    <h2 class="title">BEM-ESTAR NA PALMA DA SUA MÃO!!!!!!!</h2>
+                    <h2 class="title">BEM-ESTAR NA PALMA DA SUA MÃO!!!!!!!!!!!</h2>
                     <p class="description">Agende consultas, encontre especialistas e cuide da sua saúde com facilidade.</p>
                     <p class="description">Não tem cadastro?</p>
                     <a href="php/conexoes/login.php" onclick="mostrarFormulario('sign')" class="cta-button">Cadastre-se já!</a>
